@@ -1,81 +1,15 @@
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asteroid</title>
-</head>
+<head> 
+	<title>Asteroid</title>
+</head> 
 <body>
-  
-
-<!-- Header and Nav -->
-
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name">
-      <h1><a href="#">Asteroid</a></h1>
-    </li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
-
-  <section class="top-bar-section">
-    <!-- Right Nav Section -->
-    <ul class="right">
-      <li class="has-dropdown">
-        <a href="#">Menu</a>
-        <ul class="dropdown">
-          <li><a href="#">Hi there</a></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
-</nav>
-
-<!-- End Header and Nav -->
-
-
-<div class="row">
-
-  
-  <!-- Main Feed -->
-  <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
-  <div class="large-12 columns">
-		
-		
-  	<div class = "userpost">
-  			<div class = "panel">
-					<div class="row">
-			    	<div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[you]" /></div>
-			        <div class="large-10 columns">
-			          <h3>Say something</h3>
-			          <h6>you dummy</h6>
-			          <ul class="inline-list">
-			            <li><a href="">Reply</a></li>
-			            <li><a href="">Share</a></li>
-			          </ul>
-			        </div>
-			      </div>
-			  </div>
-  	</div>
-  	{{> postsList}}
-
-  </div>
-</div>
-
-
-<!-- Footer -->
-
-<footer class="row">
-  <div class="large-12 columns">
-    <hr />
-    <div class="row">
-      <div class="large-5 columns">
-        <p>&copy; Copyright no one at all. Go to town.</p>
-      </div>
-      <div class="large-7 columns">
-        <ul class="inline-list right">
-          <li><a href="#">About</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</footer>
+	<div class="container"> 
+		<header class="navbar">
+			<div class="navbar-inner">
+				<a class="brand" href="/">Asteroid</a>
+			</div>
+		</header>
+		<div id="main" class="row-fluid">
+			{{> postsList}}
+		</div> 
+	</div>
 </body>

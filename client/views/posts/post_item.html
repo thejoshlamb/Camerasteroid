@@ -1,15 +1,8 @@
 <template name="postItem">
-	<div class = "panel">
-		<div class="row">
-    	<div class="large-2 columns small-3"><img src="http://placehold.it/80x80&text=[img]" /></div>
-        <div class="large-10 columns">
-          <h3><a href="{{url}}">{{title}}</a></h3>
-          <h6>{{domain}}</h6>
-          <ul class="inline-list">
-            <li><a href="">Reply</a></li>
-            <li><a href="">Share</a></li>
-          </ul>
-        </div>
-      </div>
-  </div>
+<div class="post">
+	<img src = "http://placekitten.com/100/100">
+	<div class="post-content">
+		<h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
+	</div>
+</div>
 </template>

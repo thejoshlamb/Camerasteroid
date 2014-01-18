@@ -2,13 +2,22 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "foundation": {}
+      "foundation": {
+        "git": "https://github.com/ewall/meteor-foundation.git",
+        "tag": "v4.3.2"
+      },
+      "iron-router": {}
     },
     "packages": {
       "foundation": {
         "git": "https://github.com/ewall/meteor-foundation.git",
         "tag": "v4.3.2",
         "commit": "4cd0dc6ac5c69bf7477917a836d9078262d273a0"
+      },
+      "iron-router": {
+        "git": "https://github.com/EventedMind/iron-router.git",
+        "tag": "v0.6.2",
+        "commit": "ce56e58b45624dce992490f3a1c10f10d3948bae"
       }
     }
   }
