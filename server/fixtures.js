@@ -1,17 +1,11 @@
 if (Posts.find().count() === 0) {
 	Posts.insert({
-		title: "Fixture One",
-		author: "Someone",
-		url: "http://zombo.com"
+		message: "Knock Knock"
 	});
 	Posts.insert({
-		title: "Fixture Two",
-		author: "A Guy",
-		url: "http://tane.us"
+		message: "Who's there?",
 	});
 	Posts.insert({
-		title: "Fixture Three",
-		author: "Some Dude",
-		url: "http://hell.com"
+		message: "Doctor."
 	});
 }
