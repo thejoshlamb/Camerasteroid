@@ -1,7 +1,18 @@
 Posts = new Meteor.Collection('posts');
 
+Posts.allow({
+	remove: ownsDocument
+});
+
+Posts.deny({
+	update: function(userId, post, fieldNames){
+		// only allow editing of the following fields:
+		return (_.without(fieldNames,'message').length>0);
+	}
+})
+
 Meteor.methods({
-	post: function(postAttributes){
+	post: function(postAttributes){ // function adding new posts
 		var user = Meteor.user();
 
 		// ensure user is logged in

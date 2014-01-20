@@ -6,7 +6,10 @@ Template.postItem.helpers({
 
 Template.postItem.events({
 	'click .delete': function(e){
-		e.PreventDefault();
-		var currentPostId = this._id;
+		e.preventDefault();
+		if (confirm("Delete?")){
+			var currentPostId = this._id;
+			Posts.remove(currentPostId);
+		}
 	}
 });

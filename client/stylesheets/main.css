@@ -9,6 +9,12 @@ body {
 	background: #eee; color: #666666;
 }
 
+
+
+.btn {
+	border-radius: 0;
+}
+
 .navbar {
 	margin-bottom: 10px;
 }
