@@ -6,4 +6,7 @@ Template.postsList.helpers({
 		});
 	}
 });
+
+
+
  

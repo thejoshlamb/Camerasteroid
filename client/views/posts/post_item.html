@@ -1,13 +1,11 @@
 <template name="postItem">
 	<div class="post {{saved}}">
-		<img src = "http://placekitten.com/100/100">
+		<img src = "{{photo}}">
 		<div class="post-content">
 			<h3>{{message}}</h3>
 			<h5>{{submitted}}</h5>
 			<h6><a href="{{pathFor 'postPage'}}">Permalink</a></h6>
-			{{#if author}}
 			<a href="#" class="btn btn-danger delete">X</a>
-			{{/if}}
 		</div>
 	</div>
 </template>

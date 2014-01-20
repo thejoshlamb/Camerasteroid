@@ -1,32 +1,15 @@
 Posts = new Meteor.Collection('posts');
 
 Posts.allow({
-	remove: ownsDocument
 });
 
 Posts.deny({
-	update: function(userId, post, fieldNames){
-		// only allow editing of the following fields:
-		return (_.without(fieldNames,'message').length>0);
-	}
-})
+});
 
 Meteor.methods({
-	post: function(postAttributes){ // function adding new posts
-		var user = Meteor.user();
-
-		// ensure user is logged in
-		if(!user)
-			throw new Meteor.error(401,"You need to login to chat");
-
-		// ensure that the post has a message
-		if(!postAttributes.message)
-			throw new Meteor.error(422,"You have to say something");
-
-		var post = _.extend(_.pick(postAttributes,'message','submitted'),{
+	post: function(postAttributes){
+		var post = _.extend(_.pick(postAttributes,'message','submitted','photo'),{
 			saved: (this.isSimulation ? "pending" : ""),
-			userId: user._id,
-			author: user.username,
 			submitted: new Date()
 		});
 
@@ -38,6 +21,14 @@ Meteor.methods({
 			},5*1000);
 			future.wait();
 		}
+
+		if(Posts.find().count() > 5){
+			var oldest = Posts.findOne({},{
+				sort:{ submitted:1 },
+			});
+		}
+
+		Posts.remove(oldest);
 
 		var postId = Posts.insert(post);
 

@@ -9,8 +9,6 @@ body {
 	background: #eee; color: #666666;
 }
 
-
-
 .btn {
 	border-radius: 0;
 }
@@ -22,7 +20,6 @@ body {
 .navbar-inner {
 	border-radius: 0;
 }
-
 
 #spinner {
 	height: 300px 
@@ -46,8 +43,16 @@ body {
 .post img {
 	float:left;
 	margin-right:1em;
-	height:100px;
-	width:100px;
+}
+
+.post video {
+	float:left;
+	border: 1px solid red;
+}
+
+.post canvas {
+	float:left;
+	border: 1px solid green;
 }
 
 .post:before, .post:after {
