@@ -1,15 +1,12 @@
 Template.postItem.helpers({
-	domain: function(){
-		var a = document.createElement('a');
-		a.href = this.url;
-		return a.hostname;
+	ownPost: function(){
+		return this.userID == Meteor.userID();
 	}
 });
 
-
-
-
-
-
-
-				
+Template.postItem.events({
+	'click .delete': function(e){
+		e.PreventDefault();
+		var currentPostId = this._id;
+	}
+});

@@ -30,6 +30,11 @@ body {
 	transition: all 300ms 0ms ease-in; 
 	position: relative;
 	opacity: 1;
+	border: 1px solid White;
+}
+
+.pending{
+	border: 1px solid LightBlue;
 }
 
 .post img {

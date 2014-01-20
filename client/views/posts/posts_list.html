@@ -3,11 +3,18 @@
 		{{#each posts}}
 			{{> postItem}}
 		{{/each}}
+		{{#if currentUser}}
 		<div class="post new-post">
 			{{>capture}}
 			<div class="post-content">
 				{{>postSubmit}}
 			</div>
 		</div>
+		{{/if}}
+		{{#unless currentUser}}
+		<div class="post new-post">
+			<h3>Log in to post your own!</h3>
+		</div>
+		{{/unless}}
 	</div>
 </template>
