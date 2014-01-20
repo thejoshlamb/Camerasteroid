@@ -1,11 +1,11 @@
 <template name="postItem">
-	<div class="post {{saved}}">
-		<img src = "{{photo}}">
-		<div class="post-content">
-			<h3>{{message}}</h3>
-			<h5>{{submitted}}</h5>
-			<h6><a href="{{pathFor 'postPage'}}">Permalink</a></h6>
-			<a href="#" class="btn btn-danger delete">X</a>
+	<li>
+		<div class="post {{saved}}">
+			<img src = "{{photo}}">
+			<div class="post-content">
+				<p class="message">{{message}}</p>
+				<p class="submit-time">{{submitted}}</p>
+			</div>
 		</div>
-	</div>
+	</li>
 </template>

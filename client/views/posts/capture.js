@@ -5,10 +5,8 @@ if (Meteor.isClient) {
 			var streaming = false,
 			video        = document.querySelector('#video'),
 			canvas       = document.querySelector('#canvas'),
-			image        = document.querySelector('#image'),
-			startbutton  = document.querySelector('#capture'),
-			width = 320,
-			height = 0;
+			width = 160,
+			height = 120;
 
 			navigator.getMedia = ( navigator.getUserMedia ||
 				navigator.webkitGetUserMedia ||
@@ -36,7 +34,7 @@ if (Meteor.isClient) {
 
 			video.addEventListener('canplay', function(ev){
 				if (!streaming) {
-					height = video.videoHeight / (video.videoWidth/width);
+					//height = video.videoHeight / (video.videoWidth/width);
 					video.setAttribute('width', width);
 					video.setAttribute('height', height);
 					canvas.setAttribute('width', width);
@@ -46,4 +44,7 @@ if (Meteor.isClient) {
 			}, false);
 		})();
 	};
+
+	var bottomPost = document.querySelector('.post');
+	bottomPost.scrollTop = bottomPost.scrollHeight;
 }

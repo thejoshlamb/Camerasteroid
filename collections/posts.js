@@ -13,15 +13,6 @@ Meteor.methods({
 			submitted: new Date()
 		});
 
-		if(! this.isSimulation ){
-			var Future = Npm.require('fibers/future');
-			var future = new Future();
-			Meteor.setTimeout(function(){
-				future.return();
-			},5*1000);
-			future.wait();
-		}
-
 		if(Posts.find().count() > 5){
 			var oldest = Posts.findOne({},{
 				sort:{ submitted:1 },

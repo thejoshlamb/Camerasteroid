@@ -1,13 +1,16 @@
 <template name="postsList">
-	<div class="posts">
+	<div class="posts" id="posts">
+		<ul>
 		{{#each posts}}
 			{{> postItem}}
 		{{/each}}
-		<div class="post new-post">
-			{{>capture}}
-			<div class="post-content">
-				{{>postSubmit}}
-			</div>
+		</ul>
+	</div>
+	<div class="spacer"></div>
+	<div class="post new-post" id="footer">
+		{{>capture}}
+		<div class="post-content">
+			{{>postSubmit}}
 		</div>
 	</div>
 </template>
