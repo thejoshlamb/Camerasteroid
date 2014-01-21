@@ -133,6 +133,7 @@ body {
 
 
 #footer {
+	visibility: hidden;
 	background-color:White;
 	position:fixed;
 	margin-left:15em;
