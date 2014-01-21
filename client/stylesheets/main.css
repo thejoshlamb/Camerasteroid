@@ -66,8 +66,9 @@ body {
 
 #header p {
 	position:absolute;
-	bottom:1.6em;
-	left:3.8em;
+	bottom:1em;
+	left:2.1em;
+	font-size: 1.5em;
 }
 
 

@@ -6,7 +6,7 @@ Template.postSubmit.events({
 		var post = {
 			message: $(e.target).find('[name=message]').val(),
 			photo: canvas.toDataURL('image/png'),
-			submitted: new Date().getTime()
+			submitted: new Date()
 		};
 		
 		Meteor.call('post', post , function(error,id){
