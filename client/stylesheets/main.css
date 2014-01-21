@@ -157,18 +157,6 @@ body {
 	z-index:0;
 }
 
-.new-post .postbutton {
-	position:absolute;
-	right:1em;
-  border: none;
-  outline: none;
-  height: 50px;
-  width:50px;
-  font-size:1.7em;
-  color:White;
-  background-color: LightGreen;
-}
-
 .chat {
 	position:absolute;
 	font-size: 1.3em;
