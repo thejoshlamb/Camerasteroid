@@ -1,11 +1,5 @@
 Posts = new Meteor.Collection('posts');
 
-Posts.allow({
-});
-
-Posts.deny({
-});
-
 Meteor.methods({
 	post: function(postAttributes){
 		var post = _.extend(_.pick(postAttributes,'message','submitted','photo'),{
@@ -13,13 +7,12 @@ Meteor.methods({
 			submitted: new Date()
 		});
 
-		if(Posts.find().count() > 5){
+		if(Posts.find().count() > 10){
 			var oldest = Posts.findOne({},{
 				sort:{ submitted:1 },
 			});
+			Posts.remove(oldest);
 		}
-
-		Posts.remove(oldest);
 
 		var postId = Posts.insert(post);
 

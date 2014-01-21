@@ -89,6 +89,7 @@ body {
 	opacity: 1;
 	border: 1px solid White;
 	overflow:auto;
+	background-color: White;
 }
 
 .pending{
@@ -108,6 +109,10 @@ body {
 
 .post canvas {
 	display:none;
+}
+
+.post-content {
+	border-top: 1px solid Orange;
 }
 
 .message{
@@ -144,11 +149,22 @@ body {
 	z-index:0;
 }
 
+.new-post .postbutton {
+	position:absolute;
+	right:1em;
+  border: none;
+  outline: none;
+  height: 50px;
+  width:50px;
+  font-size:1.7em;
+  color:White;
+  background-color: LightGreen;
+}
+
 .chat {
-	
 	position:absolute;
 	font-size: 1.3em;
-  width: 80%;
+  width: 70%;
   box-sizing: border-box;
   padding: 0 3em 0 1em;
   border: none;
@@ -156,8 +172,4 @@ body {
   height: 50px;
   line-height: 1;
   z-index: 5;
-}
-
-#capture{
-	display:none;
 }

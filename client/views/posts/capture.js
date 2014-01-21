@@ -44,7 +44,4 @@ if (Meteor.isClient) {
 			}, false);
 		})();
 	};
-
-	var bottomPost = document.querySelector('.post');
-	bottomPost.scrollTop = bottomPost.scrollHeight;
 }
