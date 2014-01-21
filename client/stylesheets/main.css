@@ -71,6 +71,12 @@ body {
 	font-size: 1.5em;
 }
 
+.bigmiddle{
+	font-size: 4em;
+	text-align: center;
+	margin:5em auto;
+}
+
 
 #spinner {
 	height: 300px 

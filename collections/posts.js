@@ -2,7 +2,7 @@ Posts = new Meteor.Collection('posts');
 
 Meteor.methods({
 	post: function(postAttributes){
-		var post = _.extend(_.pick(postAttributes,'message','submitted','photo'),{
+		var post = _.extend(_.pick(postAttributes,'message','submitted','photo','room'),{
 			saved: (this.isSimulation ? "pending" : ""),
 			submitted: new Date()
 		});
