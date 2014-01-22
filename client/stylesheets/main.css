@@ -52,7 +52,8 @@ a {
 body {
 	background: #eee; 
 	color: #666666;
-	font-family: Helvetica;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300; 
 }
 
 #header{
@@ -98,7 +99,7 @@ body {
 #tab p {
 	font-size: 2em;
 	font-style: italic;
-	padding-top: 1em;
+	padding-top: .5em;
 }
 
 .bigmiddle{
@@ -159,7 +160,7 @@ body {
 }
 
 .submit-time{
-	font-size:0.3em;
+	font-size:0.5em;
 	float:right;
 }
 
