@@ -5,10 +5,18 @@ if (Meteor.isClient) {
 	Template.postSubmit.rendered = function(){
 
 		var streaming = false,	//	used to watch for camera activation
-		video        = document.querySelector('#video'),
-		canvas       = document.querySelector('#canvas'),
+		video = document.querySelector('#video'),
+		canvas = document.querySelector('#canvas'),
+		ctx = canvas.getContext('2d'),
 		width = 160,
 		height = 120;
+
+		canvas.width = width;
+		canvas.height = height;
+
+		ctx.fillStyle="#F6F4F0";
+		ctx.font="100px Arial";
+		ctx.fillText("?",50,100);
 
 		navigator.getMedia = ( navigator.getUserMedia ||
 			navigator.webkitGetUserMedia ||
@@ -39,11 +47,10 @@ if (Meteor.isClient) {
 		//	once camera is active, arrange the chat window
 		video.addEventListener('canplay', function(ev){
 			if (!streaming) {
-				document.querySelector('#footer').style.visibility = "visible";
-				video.setAttribute('width', width);
-				video.setAttribute('height', height);
-				canvas.setAttribute('width', width);
-				canvas.setAttribute('height', height);
+				document.querySelector('#canvas').style.display = "none";
+				document.querySelector('#video').style.display = "inline";
+				video.width = width;
+				video.height = height;
 				streaming = true;
 			}
 		}, false);

@@ -157,11 +157,9 @@ body {
 	float:left;
 }
 
-.post canvas {
-	display:none;
-}
 
 .post-content {
+	display:block;
 	border-top: 1px solid Orange;
 }
 
@@ -183,7 +181,6 @@ body {
 
 
 #footer {
-	visibility: hidden;
 	background-color:White;
 	position:fixed;
 	margin-left:15em;
@@ -193,15 +190,18 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.85);
 }
 
-.new-post img{
-	position:absolute;
-	top:0;
-	left:0;
-	z-index:0;
+#video {
+	float:left;
+	display: none;
 }
 
+#canvas {
+	float:left;
+}
+
+
 .chat {
-	position:absolute;
+	margin-top: 0.5em;
 	font-size: 1.3em;
   width: 70%;
   box-sizing: border-box;
