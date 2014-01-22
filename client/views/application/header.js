@@ -25,7 +25,7 @@ Template.header.events({
 				return alert(error.reason);
 		});
 
-		document.getElementbyId('chats-ul').empty();
+		document.querySelector('#chats-ul').innerHTML = '';
 
 		Router.go('/'+room.url);
 	}
