@@ -56,6 +56,11 @@ body {
 	font-weight: 300; 
 }
 
+.container {
+	max-width:1440px;
+	margin:auto;
+}
+
 #header{
 	position:fixed;
 	top:-2em;
@@ -100,6 +105,13 @@ body {
 	font-size: 2em;
 	font-style: italic;
 	padding-top: .5em;
+}
+
+.error {
+	visibility:hidden;
+	position:absolute;
+	bottom:0.5em;
+	left:0.5em;
 }
 
 .bigmiddle{
