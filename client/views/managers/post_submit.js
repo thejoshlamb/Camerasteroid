@@ -17,6 +17,8 @@ if (Meteor.isClient) {
 		ctx.fillStyle="#F6F4F0";
 		ctx.font="100px Arial";
 		ctx.fillText("?",50,100);
+		
+		window.scrollTo(0,document.body.scrollHeight);
 
 		navigator.getMedia = ( navigator.getUserMedia ||
 			navigator.webkitGetUserMedia ||
@@ -43,6 +45,8 @@ if (Meteor.isClient) {
 				document.querySelector(".error").style.visibility = "visible";
 			}
 		);
+
+
 
 		//	once camera is active, arrange the chat window
 		video.addEventListener('canplay', function(ev){
