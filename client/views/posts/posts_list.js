@@ -1,6 +1,7 @@
 Template.postsList.helpers({
 	posts: function(){
-		return Posts.find({room: location.pathname.substring(1,2)}, {
+		var currentRoom = location.pathname.substring(1,10);
+		return Posts.find({room: currentRoom}, {
 			sort: {submitted:1}
 		});
 	}

@@ -52,22 +52,23 @@ body {
 
 #header{
 	position:fixed;
-	top:-100px;
-	left:-100px;
-	height:200px;
-	width:200px;
+	top:-6em;
+	left:1em;
+	height:12em;
+	width:12em;
 	background-color: Orange;
 	color:white;
 	border-radius: 50%;
-	transform: rotate(-45deg);
-	-ms-transform: rotate(-45deg); /* IE 9 */
-	-webkit-transform: rotate(-45deg); /* Safari and Chrome */
 }
 
-#header p {
+#header:hover {
+
+}
+
+#title p {
 	position:absolute;
-	bottom:1em;
-	left:2.1em;
+	bottom:2em;
+	left:2em;
 	font-size: 1.5em;
 }
 

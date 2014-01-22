@@ -4,7 +4,7 @@ Template.postSubmit.events({
 		var video = document.querySelector('#video');
 		var snap = document.querySelector('#canvas').getContext('2d').drawImage(video, 0, 0, 160, 120);
 		var post = {
-			room: location.pathname.substring(1,2),
+			room: location.pathname.substring(1,10),
 			message: $(e.target).find('[name=message]').val(),
 			photo: canvas.toDataURL('image/png'),
 			submitted: new Date()

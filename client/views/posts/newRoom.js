@@ -1,7 +1,30 @@
 Template.newRoom.events({
 	'click #newroom': function(e){
 		e.preventDefault();
-		var random = Math.floor(Math.random()*10);
-		Router.go('/'+random);
+
+		function makeId()
+		{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 10; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+		}
+
+		var newrandom = makeId();
+
+		var room = {
+			url: newrandom,
+			created: new Date()
+		};
+
+		Meteor.call('makeNewRoom',room , function(error,id){
+			if (error)
+				return alert(error.reason);
+		});
+
+		Router.go('/'+room.url);
 	}
 });
