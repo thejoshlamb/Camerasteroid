@@ -42,6 +42,11 @@ table {
 	border-spacing: 0;
 }
 
+a {
+	color:inherit;
+	text-decoration:none;
+}
+
 /* END RESET */
 
 body {
@@ -52,24 +57,48 @@ body {
 
 #header{
 	position:fixed;
-	top:-6em;
-	left:1em;
-	height:12em;
-	width:12em;
-	background-color: Orange;
-	color:white;
-	border-radius: 50%;
+	top:-2em;
+	left:0;
+	height:17em;
+	width:15em;
+	text-align:center;
+	-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #header:hover {
-
+	top:7em;
 }
 
-#title p {
+#tab {
+	position:relative;
+	top:-7.5em;
+	left:1em;
+	height:13em;
+	width:13em;
+	background-color: Orange;
+	color:white;
+	border-radius: 0 0 50% 50%;
+	text-align: center
+}
+
+#tab h1 {
 	position:absolute;
-	bottom:2em;
-	left:2em;
-	font-size: 1.5em;
+	width:4em;
+	bottom:.5em;
+	left:50%;
+	margin-left:-2em;
+	font-size: 2em;
+	font-weight: 100;
+	opacity:0.8;
+}
+
+#tab p {
+	font-size: 2em;
+	font-style: italic;
+	padding-top: 1em;
 }
 
 .bigmiddle{

@@ -9,6 +9,8 @@ Template.postSubmit.events({
 			photo: canvas.toDataURL('image/png'),
 			submitted: new Date()
 		};
+
+		document.querySelector('#chatform').reset();
 		
 		Meteor.call('post', post , function(error,id){
 			if (error)
