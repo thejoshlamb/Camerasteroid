@@ -28,7 +28,7 @@ Template.header.rendered = function(){
 		//count the number of private rooms
 		if(Rooms.find().count() > 10){
 			//if there are 10 private rooms already, get the oldest room and check its posts
-			Rooms.find().fetch()
+			Rooms.find().fetch();
 			Router.go('/');
 		}
 		
