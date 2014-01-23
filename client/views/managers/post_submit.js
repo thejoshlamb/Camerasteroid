@@ -17,7 +17,7 @@ if (Meteor.isClient) {
 		ctx.fillStyle="#F6F4F0";
 		ctx.font="100px Arial";
 		ctx.fillText("?",50,100);
-		
+
 		window.scrollTo(0,document.body.scrollHeight);
 
 		navigator.getMedia = ( navigator.getUserMedia ||

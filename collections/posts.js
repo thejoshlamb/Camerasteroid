@@ -5,7 +5,7 @@ Meteor.methods({
 
 		var post = _.extend(_.pick(postAttributes,'message','submitted','photo','room'),{
 			saved: (this.isSimulation ? "pending" : ""),
-			submitted: new Date()
+			submitted: new Date(),
 		});
 
 		if(Posts.find({room: post.room}).count() > 10){
@@ -16,6 +16,17 @@ Meteor.methods({
 		}
 
 		var postId = Posts.insert(post);
+
+		// var self = Posts.findOne({_id: postId});
+		// Posts.remove(self);
+
+		if (! this.isSimulation ) {
+			if (post.room !== ""){
+				Meteor.setTimeout(function() {
+					Posts.remove(postId);
+				}, 60 * 1000);
+			}
+		}
 
 		return postId;
 	}
