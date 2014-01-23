@@ -9,4 +9,10 @@ Template.postsList.helpers({
 
 
 
+
+
+
+
+
+
  
