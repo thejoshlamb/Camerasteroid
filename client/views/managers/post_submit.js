@@ -74,6 +74,8 @@ Template.postSubmit.events({
 			submitted: new Date()
 		};
 
+		document.getElementById('chats-end').scrollIntoView();
+
 		document.querySelector('#chatform').reset();
 		
 		Meteor.call('post', post , function(error,id){
