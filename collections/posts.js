@@ -27,7 +27,6 @@ Meteor.methods({
 				}, 60 * 1000);
 			}
 		}
-
 		return postId;
 	}
 });

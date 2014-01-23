@@ -1,5 +1,3 @@
-// the header manages the creation of new Rooms
-
 Template.header.events({
 	'click #newroom': function(e){
 		e.preventDefault();
