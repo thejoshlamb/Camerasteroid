@@ -58,7 +58,7 @@ body {
 
 .container {
 	max-width:1440px;
-	margin:auto;
+	margin:auto
 }
 
 #header{
@@ -125,10 +125,9 @@ body {
 	height: 300px 
 }
 
-.posts{
+.posts, #footer{
 	width:1000px;
 	margin-left:15em;
-
 }
 .post {
 	-webkit-transition: all 300ms 0ms; 
@@ -137,33 +136,37 @@ body {
 	-o-transition: all 300ms 0ms ease-in; 
 	transition: all 300ms 0ms ease-in; 
 	opacity: 1;
-	border: 1px solid White;
-	overflow:auto;
+	overflow:hidden;
 	background-color: White;
+	display:block;
 }
 
 .pending{
 	border: 1px solid LightBlue;
 }
 
-.post img {
+.imgwrapper {
 	float:left;
-	margin-right:1em;
+	width:160px;
+	height:100%;
+	margin-right:0.3em;
 }
 
 
 .post-content {
-	display:block;
-	border-top: 1px solid Orange;
+	width:100%;
+	height:100%;
+	padding:0.3em;
+	border-top: 1px solid Orange
 }
 
 .message{
-	display:inline-block;
+	width:100%;
 	font-size: 1.3em;
-	margin:1em 0 0 0 ;
 }
 
 .submit-time{
+	padding: 0.5em 0.5em 0 0;
 	font-size:0.5em;
 	float:right;
 }
@@ -176,10 +179,10 @@ body {
 #footer {
 	background-color:White;
 	position:fixed;
-	margin-left:15em;
 	width:1000px;
 	z-index:2;
   bottom: 0;
+
   border-top: 1px solid rgba(255, 255, 255, 0.85);
 }
 
@@ -198,14 +201,13 @@ body {
 
 
 .chat {
-	margin-top: 0.5em;
 	font-size: 1.3em;
   width: 70%;
+  height:50px;
   box-sizing: border-box;
-  padding: 0 3em 0 1em;
+  padding: 0 0 0 0.3em;
   border: none;
   outline: none;
-  height: 50px;
   line-height: 1;
   z-index: 5;
 }
@@ -232,4 +234,43 @@ body {
 .faq ul .a {
 	font-size: 1em;
 	margin-bottom:3em;
+}
+
+/*speech bubbles*/
+
+.triangle-isosceles {
+  position:relative;
+  padding:15px;
+  margin:1em 0 3em;
+  color:#000;
+  background:#f3961c; /* default background for browsers without gradient support */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.triangle-isosceles:after {
+  content:"";
+  position:absolute;
+  bottom:-15px; /* value = - border-top-width - border-bottom-width */
+  left:20px; /* controls horizontal position */
+  border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:#f3961c transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+.triangle-isosceles.left {
+  margin-left:50px;
+  background:#f3961c;
+}
+
+.triangle-isosceles.left:after {
+  top:16px; /* controls vertical position */
+  left:-20px; /* value = - border-left-width - border-right-width */
+  bottom:auto;
+  border-width:10px 50px 10px 0;
+  border-color:transparent #f3961c;
 }

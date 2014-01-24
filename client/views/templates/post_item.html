@@ -1,10 +1,12 @@
 <template name="postItem">
 	<li>
 		<div class="post {{saved}}">
-			<img src = "{{photo}}">
+			<div class = "imgwrapper">
+				<img src = "{{photo}}">
+			</div>
 			<div class="post-content">
-				<p class="message">{{message}}</p>
 				<p class="submit-time">{{submitted}}</p>
+				<p class="message">{{message}}</p>
 			</div>
 		</div>
 	</li>
