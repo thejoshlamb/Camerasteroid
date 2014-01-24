@@ -173,7 +173,6 @@ body {
 	display:block;
 }
 
-
 #footer {
 	background-color:White;
 	position:fixed;
@@ -209,4 +208,28 @@ body {
   height: 50px;
   line-height: 1;
   z-index: 5;
+}
+
+.faq{
+	margin: auto;
+	text-align:center;
+}
+
+.faq ul{
+	margin: 4em auto;
+	max-width:800px;
+}
+
+.faq ul li {
+	margin: 0.5em;
+}
+
+.faq ul .q {
+	font-size: 1.3em;
+	text-decoration: underline;
+}
+
+.faq ul .a {
+	font-size: 1em;
+	margin-bottom:3em;
 }
