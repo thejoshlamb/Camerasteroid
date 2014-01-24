@@ -3,6 +3,6 @@
 // to the client, such as code containing passwords or authentication mechanisms,
 // should be kept in the server directory.
 
-Meteor.publish('posts', function(){
-	return Posts.find();
+Meteor.publish('posts', function(currentroom){
+	return Posts.find({room: currentroom});
 });
