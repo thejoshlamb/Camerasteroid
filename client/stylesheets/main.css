@@ -141,10 +141,6 @@ body {
 	display:block;
 }
 
-.pending{
-	border: 1px solid LightBlue;
-}
-
 .imgwrapper {
 	float:left;
 	width:160px;
@@ -158,6 +154,11 @@ body {
 	height:100%;
 	padding:0.3em;
 	border-top: 1px solid Orange
+}
+
+.pending{
+	border-bottom: 1px solid LightBlue;
+	padding-bottom:-1px;
 }
 
 .message{

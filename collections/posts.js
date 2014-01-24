@@ -24,7 +24,7 @@ Meteor.methods({
 			if (post.room !== ""){
 				Meteor.setTimeout(function() {
 					Posts.remove(postId);
-				}, 60 * 1000);
+				}, 60 * 60 * 1000);
 			}
 		}
 		return postId;
