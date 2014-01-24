@@ -56,6 +56,8 @@ body {
 	font-weight: 300; 
 }
 
+/*large screen rules*/
+
 .container {
 	max-width:1440px;
 	margin:auto
@@ -107,9 +109,66 @@ body {
 	padding-top: .5em;
 }
 
+/*laptop size*/
+
+@media screen and (max-width: 1600px){
+
+	.container {
+		max-width:1440px;
+		margin:auto
+	}
+
+	#header{
+		position:fixed;
+		top:-2em;
+		left:0;
+		height:17em;
+		width:15em;
+		text-align:center;
+		-webkit-transition: all 0.3s ease-in-out;
+	  -moz-transition: all 0.3s ease-in-out;
+	  -o-transition: all 0.3s ease-in-out;
+	  transition: all 0.3s ease-in-out;
+	}
+
+	#header:hover {
+		top:7em;
+	}
+
+	#tab {
+		position:relative;
+		top:-7.5em;
+		left:1em;
+		height:13em;
+		width:13em;
+		background-color: Orange;
+		color:white;
+		border-radius: 0 0 50% 50%;
+		text-align: center
+	}
+
+	#tab h1 {
+		position:absolute;
+		width:4em;
+		bottom:.5em;
+		left:50%;
+		margin-left:-2em;
+		font-size: 2em;
+		font-weight: 100;
+		opacity:0.8;
+	}
+
+	#tab p {
+		font-size: 2em;
+		font-style: italic;
+		padding-top: .5em;
+	}
+
+}
+
 .error {
 	visibility:hidden;
-	position:absolute;
+	position:fixed;
 	bottom:0.5em;
 	left:0.5em;
 }
@@ -119,7 +178,6 @@ body {
 	text-align: center;
 	margin:5em auto;
 }
-
 
 #spinner {
 	height: 300px 
@@ -212,6 +270,8 @@ body {
   line-height: 1;
   z-index: 5;
 }
+
+/*faq*/
 
 .faq{
 	margin: auto;
