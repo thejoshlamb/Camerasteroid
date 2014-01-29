@@ -13,7 +13,9 @@ Template.header.events({
 
 		var newrandom = makeId();
 
-		document.querySelector('#chats-ul').innerHTML = '';
+		// document.querySelector('#chats-ul').innerHTML = '';
+
+		$('li.chat-li').remove();
 
 		Router.go('/'+newrandom);
 	}
